@@ -1,0 +1,29 @@
+.c-alert {
+  justify-content: space-between;
+  border-radius: .25rem;
+}
+
+.c-alert__icon {
+  width: 100%;
+  max-width: 1.0625rem;
+  color: color(var(--gray300) a(50%));
+  transition: fill 250ms;
+}
+
+.c-alert__icon:hover {
+  color: color(var(--gray300) a(87.5%));
+}
+
+.c-alert--base {
+  background: var(--bluegreen500);
+  color: white;
+}
+
+.c-alert--notice {
+  background: var(--orange500);
+}
+
+.c-alert--error {
+  background: var(--orange900);
+  color: white;
+}
