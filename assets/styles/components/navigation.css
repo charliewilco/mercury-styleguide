@@ -1,0 +1,12 @@
+.c-nav {
+  background: white;
+  border-top: 1px solid var(--orange100);
+}
+
+.c-nav__link { color: var(--gray200); }
+.c-nav__link:hover { color: var(--amberA400); }
+
+.c-nav__link.active {
+  border-bottom: 2px solid;
+  color: var(--orange900);
+}
