@@ -1,0 +1,20 @@
+.c-example { width: 100%; }
+
+
+.c-example__header {
+  font-weight: 500;
+}
+
+.c-example__sub {
+  letter-spacing: 3px;
+  font-size: 1.25rem;
+  color: var(--gray200);
+  text-transform: uppercase;
+}
+
+@media (--md) {
+  .c-example {
+    width: 50%;
+    max-width: 100%;
+  }
+}

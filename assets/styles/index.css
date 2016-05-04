@@ -1,0 +1,70 @@
+@import 'obsidian.css/lib/settings';
+@import 'obsidian.css/lib/generic';
+@import 'obsidian.css/lib/elements';
+@import 'obsidian.css/lib/objects';
+@import './components/colors-blocks';
+@import './components/examples';
+@import './components/navigation';
+@import './components/btns';
+@import './components/header';
+@import './components/modals';
+@import './components/book';
+@import './components/shelf';
+@import './components/alerts';
+@import './components/tooltips';
+@import './components/banners';
+@import './components/tables';
+@import './components/fields';
+@import 'obsidian.css/lib/utilities';
+
+:root {
+  --default: 'freight-sans-pro', 'Avenir', 'Fira Sans', 'Segoe UI', sans-serif;
+  --headlines: var(--default);
+  --body-text: var(--default);
+  --ff-w: 400;
+  --ff-serif: Charter, Georgia, Times, serif;
+  --storm: #FAF8F6;
+  --gray100: #FAFAFA;
+  --gray200: #9197A3;
+  --gray300: #3C3C3C;
+  --yellow100: #FFCF00;
+  --yellow200: #FFE600;
+  --yellow300: #FFDE00;
+  --yellow400: #FFCF01;
+  --yellow500: #FFBC00;
+  --yellow600: #FFB400;
+  --yellow800: #DE9A20;
+  --yellow900: #C2840B;
+  --orange400: #FF9300;
+  --orange600: #EE781E;
+  --orange900: #BE5505;
+
+  --amber100: #FFECB3;
+  --amber200: #FFE082;
+  --amber300: #FFD54F;
+  --amber400: #FFCA28;
+  --amber500: #FFC107;
+  --amber600: #FFB300;
+  --amber700: #FFA000;
+  --amber800: #FF8F00;
+  --amber900: #FF6F00;
+  --amberA100: #FFE57F;
+  --amberA200: #FFD740;
+  --amberA400: #FFC400;
+  --amberA700: #FFAB00;
+  --orange050: #FFF3E0;
+  --orange100: #FFE0B2;
+  --orange200: #FFCC80;
+  --orange300: #FFB74D;
+  --orange400: #FFA726;
+  --orange500: #FF9800;
+  --orange600: #FB8C00;
+  --orange700: #F57C00;
+  --orange800: #EF6C00;
+  --orange900: #E65100;
+  --bluegreen500: #607D8B;
+
+  --link: var(--orange500);
+}
+
+html { background: var(--gray100); }
