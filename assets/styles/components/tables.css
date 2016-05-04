@@ -1,0 +1,8 @@
+.c-table__header {
+  color: var(--bluegreen500);
+  border-bottom: 2px solid color(var(--bluegreen500) a(50%));
+}
+
+.c-table > .table__row:not(:last-of-type) {
+  border-color: color(var(--bluegreen500) a(50%));
+}
