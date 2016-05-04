@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="u-anti">
+  {{> sty-head title="Components | Mercury Styleguide" }}
+  <body class="">
+    {{> sty-header }}
+    {{> sty-nav active-components="true"}}
+    <main class="o-container--lg u-mx-auto u-px3">
+      <h1 class="h3 u-py3 u-system u-w400">Components</h1>
+
+      {{> sty-components-nav }}
+
+      <section class="u-mb4 u-pt4" id="buttons">
+        {{> buttons }}
+      </section>
+
+      <section class="u-mb4 u-pt4" id="tooltips">
+        {{> tooltips }}
+      </section>
+
+      <section class="u-mb4 u-pt4" id="modals">
+        {{> modal }}
+      </section>
+
+      <section class="u-mb4 u-pt4" id="bookobject">
+        {{> book-object }}
+      </section>
+
+      <section class="u-mb4 u-pt4" id="shelf">
+        {{> shelf }}
+      </section>
+
+      <section class="u-mb4 u-pt4" id="alerts">
+        {{> alerts }}
+      </section>
+
+      <section class="u-mb4 u-pt4" id="banners">
+        {{> banners }}
+      </section>
+
+      <section class="u-mb4 u-pt4" id="tables">
+        {{> tables }}
+      </section>
+
+      <section class="u-mb4 u-pt4" id="inputs">
+        {{> inputs }}
+      </section>
+
+    </main>
+
+    <script type="text/javascript" src="/assets/scripts/bundle.js"></script>
+    <script type="text/javascript">
+      const input = document.getElementById('textInput');
+      const label = document.getElementById('labelTextInput');
+      const modal = document.getElementById('modal');
+      const modalOpen = document.getElementById('modalOpen');
+      const modalClose = document.getElementById('modalClose');
+
+      mercury.modals(modalOpen, modal, modalClose);
+      mercury.labels(input, label);
+    </script>
+  </body>
+</html>
