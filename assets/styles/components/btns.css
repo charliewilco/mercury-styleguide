@@ -1,0 +1,60 @@
+:root {
+  --gradient: linear-gradient(-180deg, var(--amberA400) 0%, var(--orange500) 100%);
+  --gradient-dark: linear-gradient(-180deg, var(--orange500) 0%, var(--orange900) 100%);
+}
+
+.c-btn {
+  font-weight: inherit;
+  line-height: 1;
+  display: inline-block;
+  border-radius: .375rem;
+  cursor: pointer;
+}
+
+.c-btn--sm {
+  font-size: 87.5%;
+  padding: .625rem 1rem;
+}
+
+.c-btn--md {
+  font-size: 100%;
+  padding: .75rem 1.5rem;
+}
+
+.c-btn--lg {
+  font-size: 125%;
+  padding: 1rem 2rem;
+}
+
+
+.c-btn--primary {
+  background-image: var(--gradient-dark);
+  background-size: 150%;
+  background-position: top;
+  color: white;
+  transition: background-position 250ms ease-in-out;
+}
+
+.c-btn--primary:hover, .c-btn--primary:focus {
+  background-position: bottom;
+  color: white;
+}
+
+.c-btn--soild--orange {
+  background: var(--orange900);
+  color: white;
+}
+
+.c-btn--solid--bg {
+  background: var(--bluegreen500);
+  color: white;
+}
+
+.c-btn--outline {
+  background: none;
+  color: var(--orange500);
+  border: 2px solid;
+  transition: color 250ms ease-in-out;
+}
+
+.c-btn--outline:hover, .c-btn--outline:focus { color: var(--orange700); }
