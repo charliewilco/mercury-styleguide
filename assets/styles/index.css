@@ -7,6 +7,7 @@
 @import './components/navigation';
 @import './components/btns';
 @import './components/header';
+@import './components/pagination';
 @import './components/modals';
 @import './components/book';
 @import './components/shelf';
@@ -14,6 +15,7 @@
 @import './components/tooltips';
 @import './components/banners';
 @import './components/tables';
+@import './components/checkbox';
 @import './components/fields';
 @import 'obsidian.css/lib/utilities';
 
@@ -38,16 +40,7 @@
   --orange400: #FF9300;
   --orange600: #EE781E;
   --orange900: #BE5505;
-
-  --amber100: #FFECB3;
-  --amber200: #FFE082;
-  --amber300: #FFD54F;
-  --amber400: #FFCA28;
-  --amber500: #FFC107;
-  --amber600: #FFB300;
-  --amber700: #FFA000;
-  --amber800: #FF8F00;
-  --amber900: #FF6F00;
+  /* Current Colors */
   --amberA100: #FFE57F;
   --amberA200: #FFD740;
   --amberA400: #FFC400;
