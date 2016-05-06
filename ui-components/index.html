@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html class="u-anti">
+  <head>
+    <meta name="theme-color" content="#FFBC00">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://use.typekit.net/quv2pkq.js"></script>
+      <script>try {Typekit.load({ async: true });}catch(e) {console.log(e);}</script>
+    <link rel="stylesheet" href="/assets/styles/bundle.css" />
+    <title>Components | Mercury Styleguide</title>
+  </head>
+  <body class="">
+    <header class="c-header u-px3 u-py1 u-c-text">
+      <div class="o-grid o-flex o-flex--centerH u-cf">
+        <div class="o-grid__col--5/12 o-flex o-flex--centerH">
+          <img src="/assets/images/mercury-logo.svg" class="c-header__logo u-mr3"/>
+          <h1 class="h5 c-header__text u-system u-w400 u-lh-1 u-my0">Mercury</h1>
+        </div>
+        <div class="o-grid__col--7/12 u-right">
+          <a class="c-btn c-btn--outline c-btn--md u-w500 u-mr2" href="#" class="">Github</a>
+          <a class="link" href="https://medium.com/mercury-project/">Medium</a>
+        </div>
+      </div>
+    </header>
+    <nav class="c-nav" role="navigation">
+      <ul class="list--reset">
+        <li class="u-inbl">
+          <a href="/" class="c-nav__link u-bl u-px3 u-py2 ">Basics</a>
+        </li>
+        <li class="u-inbl">
+          <a href="/ui-components/" class="c-nav__link u-bl u-px3 u-py2 active">UI Components</a>
+        </li>
+        <li class="u-inbl">
+          <a href="/info/" class="c-nav__link u-bl u-px3 u-py2 ">Info</a>
+        </li>
+      </ul>
+    </nav>
+    <main class="o-container--lg u-mx-auto u-px3">
+      <h1 class="h3 u-py3 u-system u-w400">Components</h1>
+
+      <nav class="u-caps u-lt-2">
+        <ol class="list--reset">
+          <li class="u-inbl u-mr2">
+            <a href="#buttons">Buttons</a>
+          </li>
+          <li class="u-inbl u-mr2">
+            <a href="#tooltips">Tooltips</a>
+          </li>
+          <li class="u-inbl u-mr2">
+            <a href="#modals">Modals</a>
+          </li>
+          <li class="u-inbl u-mr2">
+            <a href="#bookobject">Book Object</a>
+          </li>
+          <li class="u-inbl u-mr2">
+            <a href="#stacks">Stacks</a>
+          </li>
+          <li class="u-inbl u-mr2">
+            <a href="#alerts">Alerts</a>
+          </li>
+          <li class="u-inbl u-mr2">
+            <a href="#banners">Banner</a>
+          </li>
+          <li class="u-inbl u-mr2">
+            <a href="#tables">Tables</a>
+          </li>
+          <li class="u-inbl">
+            <a href="#pagination">Pagination</a>
+          </li>
+          <li class="u-inbl u-mr2">
+            <a href="#inputs">Inputs</a>
+          </li>
+          <li class="u-inbl u-mr2">
+            <a href="#checkboxes">Checkboxes</a>
+          </li>
+        </ol>
+      </nav>
+      <section class="u-mb4 u-pt4" id="buttons">
+        <section class="">
+          <h2 class="h4 u-mb4 c-example__header">Buttons</h2>
+          <div class="o-flex o-flex--wrap o-flex--space">
+            <section class="c-example u-left u-mb3">
+              <div>
+                <h3 class="c-example__sub h6 u-w500 u-mb2">Primary</h3>
+                <ul class="list--reset u-w400">
+                  <li class="u-inbl u-va-middle u-mr2 u-mb3">
+                    <a href="#0" class="c-btn c-btn--primary c-btn--sm">Add to Stack</a>
+                  </li>
+                  <li class="u-inbl u-va-middle u-mr2 u-mb3">
+                    <a href="#0" class="c-btn c-btn--primary c-btn--md">Add to Stack</a>
+                  </li>
+                  <li class="u-inbl u-va-middle u-mb3">
+                    <a href="#0" class="c-btn c-btn--primary c-btn--lg">Add to Stack</a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="c-example u-left">
+              <div>
+                <h3 class="c-example__sub h6 u-w500 u-mb2">Outline</h3>
+                <ul class="list--reset u-w400">
+                  <li class="u-inbl u-va-middle u-mr2 u-mb3">
+                    <a href="#0" class="c-btn c-btn--outline c-btn--sm">Add to Stack</a>
+                  </li>
+                  <li class="u-inbl u-va-middle u-mr2 u-mb3">
+                    <a href="#0" class="c-btn c-btn--outline c-btn--md">Add to Stack</a>
+                  </li>
+                  <li class="u-inbl u-va-middle u-mb3">
+                    <a href="#0" class="c-btn c-btn--outline c-btn--lg">Add to Stack</a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </section>
+      </section>
+
+      <section class="u-mb4 u-pt4" id="tooltips">
+        <h2 class="h4 u-mb4 c-example__header">Tooltips</h2>
+        <div class="u-center">
+          <a href="#0" data-tooltip="Tooltip" class="c-tooltip c-tooltip--n">Hover Over Me</a>
+        </div>
+      </section>
+
+      <section class="u-mb4 u-pt4" id="modals">
+        <h2 class="h4 u-mb4 c-example__header">Modals</h2>
+        <div class="u-center">
+          <a href="#0" id="modalOpen" class="c-btn c-btn--primary c-btn--md">Click Me</a>
+        </div>
+        
+        <div class="c-modal" id="modal">
+          <div class="u-relative">
+            <a href="#" class="c-modal__close u-p3" id="modalClose">Close</a>
+            <div class="o-container--md u-mx-auto u-p3">
+              <div class="">
+                <div class="">
+                  <h1 class="h3 u-w300">Hello From the Modal</h1>
+                  <p class="u-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="u-mb4 u-pt4" id="bookobject">
+        <div class="">
+          <h2 class="h4 u-mb4 c-example__header">Book Object</h2>
+          <div class="u-left u-mb3 u-px1@lg">
+            <h3 class="c-example__sub h6 u-w500 u-mb4">From Search</h3>
+            <div class="c-book c-book__list-item u-pb3 u-mb3">
+              <div class="c-book__listing o-flex o-flex--centerH o-flex--wrap">
+                <div class="o-flex o-flex--centerH">
+                  <div class="c-book__cover">
+                    <img src="http://d.gr-assets.com/books/1375931640l/17332243.jpg" alt="Hild: A Novel" />
+                  </div>
+                  <div class="u-ml3">
+                    <h4 class="h5 u-w300">Hild: A Novel</h4>
+                    <span class="u-system">Nicola Griffith</span>
+                      <br />
+                      <span class="small u-caps u-lt-2">March 6, 2014</span>
+                  </div>
+                </div>
+                <div class="u-right@lg">
+                  <a href="#" class="c-btn c-btn--md c-btn--primary u-w700 u-mr0 u-mb2">Add to Stack</a>
+                  <br />
+                  <a href="#">Write a Review</a>
+                </div>
+              </div>
+            </div>
+            <div class="c-book c-book__list-item u-pb3">
+              <div class="c-book__listing o-flex o-flex--centerH o-flex--wrap">
+                <div class="o-flex o-flex--centerH">
+                  <div class="c-book__cover">
+                    <img src="http://res.cloudinary.com/revision-path/image/upload/v1455115028/austin-kleon-show-your-work_cnxi21.jpg" alt="Show Your Work!" />
+                  </div>
+                  <div class="u-ml3">
+                    <h4 class="h5 u-w300">Show Your Work!</h4>
+                    <span class="u-system">Austin Kleon</span>
+                      <br />
+                      <span class="small u-caps u-lt-2">March 6, 2014</span>
+                  </div>
+                </div>
+                <div class="u-right@lg">
+                  <a href="#" class="c-btn c-btn--md c-btn--primary u-w700 u-mr0 u-mb2">Add to Stack</a>
+                  <br />
+                  <a href="#">Write a Review</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="u-left u-mb3 u-px1@lg">
+            <h3 class="c-example__sub h6 u-w500 u-mb4">Single Books in Group</h3>
+            <div class="o-flex o-flex--wrap o-flex--centerH o-flex--centerSA">
+              <div class="c-book u-mb2 ">
+                <div class="">
+                  <div class="">
+                    <div class="c-book__cover c-book__cover--sm">
+                      <img src="http://res.cloudinary.com/revision-path/image/upload/v1455115028/austin-kleon-show-your-work_cnxi21.jpg" alt="Show Your Work!" class="u-bl" />
+                      <div class="u-absolute c-book__details__container">
+                        <a href="#" class="c-book__details u-inbl u-p2 u-relative">
+                          <svg class="u-bl u-absolute u-my-auto u-mx-auto" viewBox="10 20 25 5">
+                            <g stroke="none" stroke-width="1" transform="translate(10.000000, 20.000000)">
+                              <ellipse cx="2.19105642" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="12.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="22.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="u-none">
+                      <h4 class="h5 u-w300">Show Your Work!</h4>
+                      <span class="u-system">Austin Kleon</span>
+                      <br />
+                      <span class="small u-caps u-lt-2">March 6, 2014</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-book u-mb2 ">
+                <div class="">
+                  <div class="">
+                    <div class="c-book__cover c-book__cover--sm">
+                      <img src="http://laughingsquid.com/wp-content/uploads/marvuntold.jpg" alt="Marvel Comics: the Untold Story" class="u-bl" />
+                      <div class="u-absolute c-book__details__container">
+                        <a href="#" class="c-book__details u-inbl u-p2 u-relative">
+                          <svg class="u-bl u-absolute u-my-auto u-mx-auto" viewBox="10 20 25 5">
+                            <g stroke="none" stroke-width="1" transform="translate(10.000000, 20.000000)">
+                              <ellipse cx="2.19105642" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="12.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="22.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="u-none">
+                      <h4 class="h5 u-w300">Marvel Comics: the Untold Story</h4>
+                      <span class="u-system">Sean Howe</span>
+                      <br />
+                      <span class="small u-caps u-lt-2">March 6, 2014</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-book u-mb2 ">
+                <div class="">
+                  <div class="">
+                    <div class="c-book__cover c-book__cover--sm">
+                      <img src="http://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781501121746/sprint-9781501121746_hr.jpg" alt="Sprint" class="u-bl" />
+                      <div class="u-absolute c-book__details__container">
+                        <a href="#" class="c-book__details u-inbl u-p2 u-relative">
+                          <svg class="u-bl u-absolute u-my-auto u-mx-auto" viewBox="10 20 25 5">
+                            <g stroke="none" stroke-width="1" transform="translate(10.000000, 20.000000)">
+                              <ellipse cx="2.19105642" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="12.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="22.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="u-none">
+                      <h4 class="h5 u-w300">Sprint</h4>
+                      <span class="u-system">Jake Knapp</span>
+                      <br />
+                      <span class="small u-caps u-lt-2">March 6, 2014</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-book u-mb2 ">
+                <div class="">
+                  <div class="">
+                    <div class="c-book__cover c-book__cover--sm">
+                      <img src="http://a3.mzstatic.com/us/r30/Publication/v4/bd/d9/72/bdd9721f-15bc-0d42-54da-af1593b975e0/cover225x225.jpeg" alt="Steal Like an Artist" class="u-bl" />
+                      <div class="u-absolute c-book__details__container">
+                        <a href="#" class="c-book__details u-inbl u-p2 u-relative">
+                          <svg class="u-bl u-absolute u-my-auto u-mx-auto" viewBox="10 20 25 5">
+                            <g stroke="none" stroke-width="1" transform="translate(10.000000, 20.000000)">
+                              <ellipse cx="2.19105642" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="12.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="22.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="u-none">
+                      <h4 class="h5 u-w300">Steal Like an Artist</h4>
+                      <span class="u-system">Austin Kleon</span>
+                      <br />
+                      <span class="small u-caps u-lt-2">March 6, 2014</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-book u-mb2 ">
+                <div class="">
+                  <div class="">
+                    <div class="c-book__cover c-book__cover--sm">
+                      <img src="http://images.smh.com.au/2014/02/21/5188199/Pd-Spect-N-20140221161812528079-300x0.jpg" alt="For Today I Am a Boy" class="u-bl" />
+                      <div class="u-absolute c-book__details__container">
+                        <a href="#" class="c-book__details u-inbl u-p2 u-relative">
+                          <svg class="u-bl u-absolute u-my-auto u-mx-auto" viewBox="10 20 25 5">
+                            <g stroke="none" stroke-width="1" transform="translate(10.000000, 20.000000)">
+                              <ellipse cx="2.19105642" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="12.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="22.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="u-none">
+                      <h4 class="h5 u-w300">For Today I Am a Boy</h4>
+                      <span class="u-system">Kim Fu</span>
+                      <br />
+                      <span class="small u-caps u-lt-2">August 5, 2014</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-book u-mb2 ">
+                <div class="">
+                  <div class="">
+                    <div class="c-book__cover c-book__cover--sm">
+                      <img src="http://www.vogue.com/wp-content/uploads/2015/09/21/01-big-magic-book-review.jpg" alt="Big Magic" class="u-bl" />
+                      <div class="u-absolute c-book__details__container">
+                        <a href="#" class="c-book__details u-inbl u-p2 u-relative">
+                          <svg class="u-bl u-absolute u-my-auto u-mx-auto" viewBox="10 20 25 5">
+                            <g stroke="none" stroke-width="1" transform="translate(10.000000, 20.000000)">
+                              <ellipse cx="2.19105642" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="12.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="22.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="u-none">
+                      <h4 class="h5 u-w300">Big Magic</h4>
+                      <span class="u-system">Elizabeth Gilbert</span>
+                      <br />
+                      <span class="small u-caps u-lt-2">March 6, 2014</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-book u-mb2 ">
+                <div class="">
+                  <div class="">
+                    <div class="c-book__cover c-book__cover--sm">
+                      <img src="https://ronanwills.files.wordpress.com/2015/07/red-rising-pierce-brown.jpg" alt="Red Rising" class="u-bl" />
+                      <div class="u-absolute c-book__details__container">
+                        <a href="#" class="c-book__details u-inbl u-p2 u-relative">
+                          <svg class="u-bl u-absolute u-my-auto u-mx-auto" viewBox="10 20 25 5">
+                            <g stroke="none" stroke-width="1" transform="translate(10.000000, 20.000000)">
+                              <ellipse cx="2.19105642" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="12.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="22.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="u-none">
+                      <h4 class="h5 u-w300">Red Rising</h4>
+                      <span class="u-system">Pierce Brown</span>
+                      <br />
+                      <span class="small u-caps u-lt-2">August 5, 2014</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-book u-mb2 ">
+                <div class="">
+                  <div class="">
+                    <div class="c-book__cover c-book__cover--sm">
+                      <img src="http://craphound.com/craphound/wp-content/cory/makers-US-cover-large.jpg" alt="Makers" class="u-bl" />
+                      <div class="u-absolute c-book__details__container">
+                        <a href="#" class="c-book__details u-inbl u-p2 u-relative">
+                          <svg class="u-bl u-absolute u-my-auto u-mx-auto" viewBox="10 20 25 5">
+                            <g stroke="none" stroke-width="1" transform="translate(10.000000, 20.000000)">
+                              <ellipse cx="2.19105642" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="12.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="22.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="u-none">
+                      <h4 class="h5 u-w300">Makers</h4>
+                      <span class="u-system">Cory Doctorow</span>
+                      <br />
+                      <span class="small u-caps u-lt-2">March 6, 2014</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-book u-mb2 ">
+                <div class="">
+                  <div class="">
+                    <div class="c-book__cover c-book__cover--sm">
+                      <img src="https://www.subtraction.com/wp-content/uploads/2014/09/2014-09-11-on-web-typography-cover.jpg" alt="On Web Typography" class="u-bl" />
+                      <div class="u-absolute c-book__details__container">
+                        <a href="#" class="c-book__details u-inbl u-p2 u-relative">
+                          <svg class="u-bl u-absolute u-my-auto u-mx-auto" viewBox="10 20 25 5">
+                            <g stroke="none" stroke-width="1" transform="translate(10.000000, 20.000000)">
+                              <ellipse cx="2.19105642" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="12.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="22.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="u-none">
+                      <h4 class="h5 u-w300">On Web Typography</h4>
+                      <span class="u-system">Jason Santa Maria</span>
+                      <br />
+                      <span class="small u-caps u-lt-2">August 5, 2014</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-book u-mb2 ">
+                <div class="">
+                  <div class="">
+                    <div class="c-book__cover c-book__cover--sm">
+                      <img src="http://www.nickharkaway.com/wp-content/uploads/2014/05/Book-Front.jpg" alt="Tigerman" class="u-bl" />
+                      <div class="u-absolute c-book__details__container">
+                        <a href="#" class="c-book__details u-inbl u-p2 u-relative">
+                          <svg class="u-bl u-absolute u-my-auto u-mx-auto" viewBox="10 20 25 5">
+                            <g stroke="none" stroke-width="1" transform="translate(10.000000, 20.000000)">
+                              <ellipse cx="2.19105642" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="12.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                              <ellipse cx="22.1910564" cy="2.19105642" rx="2.19105642" ry="2.19105642"></ellipse>
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="u-none">
+                      <h4 class="h5 u-w300">Tigerman</h4>
+                      <span class="u-system">Nick Harkaway</span>
+                      <br />
+                      <span class="small u-caps u-lt-2">August 5, 2014</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+      </section>
+
+      <section class="u-mb4 u-pt4" id="shelf">
+        <h2 class="h4 u-mb4 c-example__header">Stack</h2>
+        <h3 class="c-example__sub h6 u-w500 u-mb4">Inline Stack</h3>
+        <div class="c-shelf u-mb4 u-pb3">
+          <div class="c-shelf__item u-inbl">
+            <div class="">
+              <div class="c-shelf__cover u-mb2">
+                <img src="http://res.cloudinary.com/revision-path/image/upload/v1455115028/austin-kleon-show-your-work_cnxi21.jpg" alt="Show Your Work!" class="c-shelf__cover__img u-bl" />
+              </div>
+              <div class="c-shelf__details">
+                <h4 class="h6 c-shelf__title u-lh-1 u-w300">
+                  <a href="#">Show Your Work!</a>
+                </h4>
+                <div class="">
+                  <span class="c-shelf__meta u-system">Austin Kleon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-shelf__item u-inbl">
+            <div class="">
+              <div class="c-shelf__cover u-mb2">
+                <img src="http://laughingsquid.com/wp-content/uploads/marvuntold.jpg" alt="Marvel Comics: the Untold Story" class="c-shelf__cover__img u-bl" />
+              </div>
+              <div class="c-shelf__details">
+                <h4 class="h6 c-shelf__title u-lh-1 u-w300">
+                  <a href="#">Marvel Comics: the Untold Story</a>
+                </h4>
+                <div class="">
+                  <span class="c-shelf__meta u-system">Sean Howe</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-shelf__item u-inbl">
+            <div class="">
+              <div class="c-shelf__cover u-mb2">
+                <img src="http://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781501121746/sprint-9781501121746_hr.jpg" alt="Sprint" class="c-shelf__cover__img u-bl" />
+              </div>
+              <div class="c-shelf__details">
+                <h4 class="h6 c-shelf__title u-lh-1 u-w300">
+                  <a href="#">Sprint</a>
+                </h4>
+                <div class="">
+                  <span class="c-shelf__meta u-system">Jake Knapp</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-shelf__item u-inbl">
+            <div class="">
+              <div class="c-shelf__cover u-mb2">
+                <img src="http://a3.mzstatic.com/us/r30/Publication/v4/bd/d9/72/bdd9721f-15bc-0d42-54da-af1593b975e0/cover225x225.jpeg" alt="Steal Like an Artist" class="c-shelf__cover__img u-bl" />
+              </div>
+              <div class="c-shelf__details">
+                <h4 class="h6 c-shelf__title u-lh-1 u-w300">
+                  <a href="#">Steal Like an Artist</a>
+                </h4>
+                <div class="">
+                  <span class="c-shelf__meta u-system">Austin Kleon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-shelf__item u-inbl">
+            <div class="">
+              <div class="c-shelf__cover u-mb2">
+                <img src="http://images.smh.com.au/2014/02/21/5188199/Pd-Spect-N-20140221161812528079-300x0.jpg" alt="For Today I Am a Boy" class="c-shelf__cover__img u-bl" />
+              </div>
+              <div class="c-shelf__details">
+                <h4 class="h6 c-shelf__title u-lh-1 u-w300">
+                  <a href="#">For Today I Am a Boy</a>
+                </h4>
+                <div class="">
+                  <span class="c-shelf__meta u-system">Kim Fu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-shelf__item u-inbl">
+            <div class="">
+              <div class="c-shelf__cover u-mb2">
+                <img src="http://www.vogue.com/wp-content/uploads/2015/09/21/01-big-magic-book-review.jpg" alt="Big Magic" class="c-shelf__cover__img u-bl" />
+              </div>
+              <div class="c-shelf__details">
+                <h4 class="h6 c-shelf__title u-lh-1 u-w300">
+                  <a href="#">Big Magic</a>
+                </h4>
+                <div class="">
+                  <span class="c-shelf__meta u-system">Elizabeth Gilbert</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-shelf__item u-inbl">
+            <div class="">
+              <div class="c-shelf__cover u-mb2">
+                <img src="https://ronanwills.files.wordpress.com/2015/07/red-rising-pierce-brown.jpg" alt="Red Rising" class="c-shelf__cover__img u-bl" />
+              </div>
+              <div class="c-shelf__details">
+                <h4 class="h6 c-shelf__title u-lh-1 u-w300">
+                  <a href="#">Red Rising</a>
+                </h4>
+                <div class="">
+                  <span class="c-shelf__meta u-system">Pierce Brown</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-shelf__item u-inbl">
+            <div class="">
+              <div class="c-shelf__cover u-mb2">
+                <img src="http://craphound.com/craphound/wp-content/cory/makers-US-cover-large.jpg" alt="Makers" class="c-shelf__cover__img u-bl" />
+              </div>
+              <div class="c-shelf__details">
+                <h4 class="h6 c-shelf__title u-lh-1 u-w300">
+                  <a href="#">Makers</a>
+                </h4>
+                <div class="">
+                  <span class="c-shelf__meta u-system">Cory Doctorow</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-shelf__item u-inbl">
+            <div class="">
+              <div class="c-shelf__cover u-mb2">
+                <img src="https://www.subtraction.com/wp-content/uploads/2014/09/2014-09-11-on-web-typography-cover.jpg" alt="On Web Typography" class="c-shelf__cover__img u-bl" />
+              </div>
+              <div class="c-shelf__details">
+                <h4 class="h6 c-shelf__title u-lh-1 u-w300">
+                  <a href="#">On Web Typography</a>
+                </h4>
+                <div class="">
+                  <span class="c-shelf__meta u-system">Jason Santa Maria</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-shelf__item u-inbl">
+            <div class="">
+              <div class="c-shelf__cover u-mb2">
+                <img src="http://www.nickharkaway.com/wp-content/uploads/2014/05/Book-Front.jpg" alt="Tigerman" class="c-shelf__cover__img u-bl" />
+              </div>
+              <div class="c-shelf__details">
+                <h4 class="h6 c-shelf__title u-lh-1 u-w300">
+                  <a href="#">Tigerman</a>
+                </h4>
+                <div class="">
+                  <span class="c-shelf__meta u-system">Nick Harkaway</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h3 class="c-example__sub h6 u-w500 u-mb4">Stack Groups</h3>
+        <div class="o-flex o-flex--wrap o-flex--centerSA">
+          <div class="c-shelf__item c-shelf__group u-relative">
+            <div class="">
+              <div class="c-shelf__cover u-mb5">
+                <img src="http://www.vogue.com/wp-content/uploads/2015/09/21/01-big-magic-book-review.jpg" alt="Currently Reading" class="c-shelf__cover__img u-bl" />
+              </div>
+              <div class="c-shelf__details">
+                <h4 class="h6 c-shelf__title u-lh-1 u-w300">
+                  <a href="#">Currently Reading</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="c-shelf__item c-shelf__group u-relative">
+            <div class="">
+              <div class="c-shelf__cover u-mb5">
+                <img src="http://www.vogue.com/wp-content/uploads/2015/09/21/01-big-magic-book-review.jpg" alt="Favorites" class="c-shelf__cover__img u-bl" />
+              </div>
+              <div class="c-shelf__details">
+                <h4 class="h6 c-shelf__title u-lh-1 u-w300">
+                  <a href="#">Favorites</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="u-mb4 u-pt4" id="alerts">
+        <div>
+          <h2 class="h4 u-mb4 c-example__header">Alerts</h2>
+          <div class="u-mb4">
+            <h3 class="c-example__sub h6 u-w500 u-mb2">Error</h3>
+            <div class="o-flex o-flex--centerH u-p3 c-alert c-alert--error">
+              <div>
+                <span class="u-w500 u-lh-1">Looks like we need to do this.</span>
+              </div>
+            
+                <a href="" class="u-bl c-alert__icon">
+                  <svg class="u-bl" viewBox="0 0 32 32">
+                    <path d="M4 8 L8 4 L16 12 L24 4 L28 8 L20 16 L28 24 L24 28 L16 20 L8 28 L4 24 L12 16 z"></path>
+                  </svg>
+                </a>
+            </div>
+          </div>
+          <div class="u-mb4">
+            <h3 class="c-example__sub h6 u-w500 u-mb2">Base</h3>
+            <div class="o-flex o-flex--centerH u-p3 c-alert c-alert--base">
+              <div>
+                <span class="u-w500 u-lh-1">Looks like we need to do this.</span>
+              </div>
+            
+                <a href="" class="u-bl c-alert__icon">
+                  <svg class="u-bl" viewBox="0 0 32 32">
+                    <path d="M4 8 L8 4 L16 12 L24 4 L28 8 L20 16 L28 24 L24 28 L16 20 L8 28 L4 24 L12 16 z"></path>
+                  </svg>
+                </a>
+            </div>
+          </div>
+          <div class="u-mb4">
+            <h3 class="c-example__sub h6 u-w500 u-mb2">Notice</h3>
+            <div class="o-flex o-flex--centerH u-p3 c-alert c-alert--notice">
+              <div>
+                <span class="u-w500 u-lh-1">Looks like we need to do this.</span>
+              </div>
+            
+                <a href="" class="u-bl c-alert__icon">
+                  <svg class="u-bl" viewBox="0 0 32 32">
+                    <path d="M4 8 L8 4 L16 12 L24 4 L28 8 L20 16 L28 24 L24 28 L16 20 L8 28 L4 24 L12 16 z"></path>
+                  </svg>
+                </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="u-mb4 u-pt4" id="banners">
+        <h2 class="h4 u-mb4 c-example__header">Banners</h2>
+        
+        <div class="c-banner u-px1 u-py5 u-center">
+          <div class="u-py3">
+            <img class="c-banner__image u-inbl u-mb3" src="/assets/images/mercury-logo-white.svg">
+            <h3 class="u-system u-w300 u-mb3">Sign Up Today</h3>
+            <a href="#0" class="c-btn c-btn--outline--white c-btn--md">Click Here</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="u-mb4 u-pt4" id="tables">
+        <h2 class="h4 u-mb4 c-example__header">Tables</h2>
+        
+        <table class="table c-table">
+          <tr class="c-table__header">
+            <th class="table__heading h6 u-lt-1 u-caps u-pb2 u-w400 u-left">Name</th>
+            <th class="table__heading h6 u-lt-1 u-caps u-pb2 u-w400 u-left">Type</th>
+            <th class="table__heading h6 u-lt-1 u-caps u-pb2 u-w400 u-left">Grade</th>
+          </tr>
+          <tr class="table__row">
+            <td class="table__content u-py2" data-heading="Name">Gizmo</td>
+            <td class="table__content u-py2" data-heading="Type">Robot</td>
+            <td class="table__content u-py2" data-heading="Grade">A+</td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__content u-py2" data-heading="Name">Sherlock Holmes</td>
+            <td class="table__content u-py2" data-heading="Type">Human</td>
+            <td class="table__content u-py2" data-heading="Grade">B-</td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__content u-py2" data-heading="Name">Merlin</td>
+            <td class="table__content u-py2" data-heading="Type">Wizard</td>
+            <td class="table__content u-py2" data-heading="Grade">C</td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__content u-py2" data-heading="Name">Richard Nixon</td>
+            <td class="table__content u-py2" data-heading="Type">Cyborg</td>
+            <td class="table__content u-py2" data-heading="Grade">B-</td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="u-mb4 u-pt4" id="pagination">
+        <h2 class="h4 u-mb4 c-example__header">Pagination</h2>
+        
+        <nav class="c-pag h6 o-flex o-flex--space o-flex--centerH u-py3 u-px1">
+          <a href="" class="c-pag__ctrl c-btn c-btn--sm c-btn--outline u-w700">
+            <span class="u-mr2@md">&lt;</span>
+            <span class="u-none u-in@md">&nbsp;Previous</span>
+          </a>
+          <ul class="list--reset o-flex o-flex--centerH o-flex--centerSA o-grid__col--8/12 u-system">
+            <li><a class="u-px2 u-py1 u-w400 c-pag__link" href="">1</a></li>
+            <li><a class="u-px2 u-py1 u-w400 c-pag__link" href="">2</a></li>
+            <li><a class="u-px2 u-py1 u-w400 c-pag__link" href="">3</a></li>
+            <li><a class="u-px2 u-py1 u-w400 c-pag__link active" href="">4</a></li>
+            <li><a class="u-px2 u-py1 u-w400 c-pag__link" href="">5</a></li>
+            <li><a class="u-px2 u-py1 u-w400 c-pag__link" href="">6</a></li>
+            <li><a class="u-px2 u-py1 u-w400 c-pag__link" href="">7</a></li>
+            <li><a class="u-px2 u-py1 u-w400 c-pag__link" href="">8</a></li>
+          </ul>
+          <a href="" class="c-pag__ctrl c-btn c-btn--sm c-btn--outline u-w700">
+            <span class="u-none u-in@md">Next&nbsp;</span>
+            <span class="u-ml2@md">&gt;</span>
+          </a>
+        </nav>
+      </section>
+
+      <section class="u-mb4 u-pt4" id="inputs">
+        <h2 class="h4 u-mb4 c-example__header">Inputs</h2>
+        <div class="u-pb4">
+          <form action="">
+            <div class="o-grid u-cf">
+              <div class="o-grid__col--6/12@lg u-fl@lg u-pr1@lg">
+                <h3 class="c-example__sub h6 u-w500 u-mb2">Floating Label Input</h3>
+                <div class="u-relative u-mb3"> <!-- needs u-ov-hid -->
+                  <input type="text" id="textInput" name="textInput" class="c-field c-field--float u-relative o-input u-px2 u-py3 u-bl h6" required>
+                  <label class="c-field--float__label o-label u-caps u-w500 u-lh-1 u-inbl u-p2" for="textInput" id="labelTextInput">Text Field</label>
+                </div>
+              </div>
+              <div class="o-grid__col--6/12@lg u-fl@lg u-pl1@lg">
+                <h3 class="c-example__sub h6 u-w500 u-mb2">Normal Input</h3>
+                <div class="">
+                  <input type="text" id="textInput" name="textInput" class="c-field o-input u-mb2 u-p2 u-bl h6">
+                  <label class="o-label u-bl u-lt-1 u-caps u-w500" for="textInput">Text Field</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="u-mb4 u-pt4" id="checkboxes">
+        <h2 class="h4 u-mb4 c-example__header">Checkboxes</h2>
+        
+        <div class="u-center o-flex o-flex--centerSA o-container--xs u-mx-auto">
+          <label for="uncheckInput" class="c-checkbox__container u-bl">
+            <input type="checkbox" id="uncheckInput" class="u-none c-checkbox" />
+            <div class="c-checkbox__elem u-inbl u-mb2"></div>
+            <br />
+            <span class="u-caps o-label">Check Box: Unchecked</span>
+          </label>
+          <label for="checkInput" class="c-checkbox__container u-bl">
+            <input checked type="checkbox" id="checkInput" class="u-none c-checkbox" />
+            <div class="c-checkbox__elem u-inbl u-mb2"></div>
+            <br />
+            <span class="u-caps o-label">Check Box: Checked</span>
+          </label>
+        </div>
+      </section>
+    </main>
+    <footer class="c-footer u-center u-py3">
+      <span class="u-system u-caps u-lt-2">&copy; 2016 <a href="http://charlespeters.net">Charles Peters</a></span>
+    </footer>
+    <script type="text/javascript" src="/assets/scripts/bundle.js"></script>
+    <script type="text/javascript">
+      const input = document.getElementById('textInput');
+      const label = document.getElementById('labelTextInput');
+      const modal = document.getElementById('modal');
+      const modalOpen = document.getElementById('modalOpen');
+      const modalClose = document.getElementById('modalClose');
+
+      mercury.modals(modalOpen, modal, modalClose);
+      mercury.labels(input, label);
+    </script>
+  </body>
+</html>
