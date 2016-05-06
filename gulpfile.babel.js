@@ -12,6 +12,7 @@ import stylelint from 'stylelint';
 import eslint from 'gulp-eslint';
 import imagemin from 'gulp-imagemin';
 import handlebars from 'gulp-compile-handlebars';
+import md from 'gulp-markdown';
 import uglify from 'gulp-uglify';
 import browserify from 'browserify';
 import babelify from 'babelify';
@@ -86,6 +87,14 @@ const templates = () => {
     .pipe(bs.stream({ once: true }));
 };
 
+
+const markdown = () => {
+  return gulp.src('./content/*.md')
+    .pipe(md())
+    .pipe(rename({ extname: '.md.hbs' }))
+    .pipe(gulp.dest('./views/partials/content/'));
+};
+
 // Image Processing
 /////////////////////////
 
@@ -141,17 +150,18 @@ const watch = () => {
   gulp.watch(paths.css.all, styles);
   gulp.watch(paths.js.all, scripts);
   gulp.watch(paths.views.all, templates);
+  gulp.watch('./content/*', gulp.series(markdown, templates));
   gulp.watch(paths.img.src, images);
 };
 
 // Exports Functions as Proper Tasks
 
-export { clean, templates, styles, scripts, images, lint, watch, connect };
+export { clean, markdown, templates, styles, scripts, images, lint, watch, connect };
 
 // Default Tasks
 /////////////////////////
 
-const build = gulp.series(clean, gulp.parallel(templates, styles, scripts, images));
+const build = gulp.series(clean, markdown, gulp.parallel(templates, styles, scripts, images));
 const all = gulp.series(build, gulp.parallel(lint, connect, watch));
 
 export default all;
