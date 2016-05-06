@@ -1,6 +1,7 @@
 @import 'obsidian.css/lib/settings';
 @import 'obsidian.css/lib/generic';
 @import 'obsidian.css/lib/elements';
+@import './elements/blockquote';
 @import 'obsidian.css/lib/objects';
 @import './components/colors-blocks';
 @import './components/examples';
@@ -17,18 +18,15 @@
 @import './components/tables';
 @import './components/checkbox';
 @import './components/fields';
+@import './components/post';
+@import './components/lists';
 @import 'obsidian.css/lib/utilities';
 
 :root {
-  --default: 'freight-sans-pro', 'Avenir', 'Fira Sans', 'Segoe UI', sans-serif;
-  --headlines: var(--default);
-  --body-text: var(--default);
-  --ff-w: 400;
-  --ff-serif: Charter, Georgia, Times, serif;
+  /* Old Colors For Reference */
+
   --storm: #FAF8F6;
-  --gray100: #FAFAFA;
-  --gray200: #9197A3;
-  --gray300: #3C3C3C;
+
   --yellow100: #FFCF00;
   --yellow200: #FFE600;
   --yellow300: #FFDE00;
@@ -37,14 +35,22 @@
   --yellow600: #FFB400;
   --yellow800: #DE9A20;
   --yellow900: #C2840B;
+
   --orange400: #FF9300;
   --orange600: #EE781E;
   --orange900: #BE5505;
+
   /* Current Colors */
+
+  --gray100: #FAFAFA;
+  --gray200: #9197A3;
+  --gray300: #3C3C3C;
+
   --amberA100: #FFE57F;
   --amberA200: #FFD740;
   --amberA400: #FFC400;
   --amberA700: #FFAB00;
+
   --orange050: #FFF3E0;
   --orange100: #FFE0B2;
   --orange200: #FFCC80;
@@ -55,9 +61,18 @@
   --orange700: #F57C00;
   --orange800: #EF6C00;
   --orange900: #E65100;
+
   --bluegreen500: #607D8B;
 
-  --link: var(--orange500);
+  --gradient: linear-gradient(-180deg, var(--amberA400) 0%, var(--orange500) 100%);
+  --gradient-dark: linear-gradient(-180deg, var(--orange500) 0%, var(--orange900) 100%);
+
+  --default: 'freight-sans-pro', 'Avenir', 'Fira Sans', 'Segoe UI', sans-serif;
+  --headlines: var(--default);
+  --body-text: inherit;
+  --ff-w: 400;
+  --ff-serif: 'Charter', 'Georgia', 'PT Serif', 'Times', serif;
+  --link: var(--orange600);
 }
 
 html { background: var(--gray100); }
