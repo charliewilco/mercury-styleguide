@@ -8,6 +8,7 @@ import postcss from 'gulp-postcss';
 import cssnext from 'postcss-cssnext';
 import atImport from 'postcss-import';
 import apply from 'postcss-apply';
+import cssnano from 'cssnano';
 import reporter from 'postcss-reporter';
 import stylelint from 'stylelint';
 import eslint from 'gulp-eslint';
@@ -29,7 +30,7 @@ const bs = browserSync.create();
 /////////////////////////
 
 const styles = function () {
-  const processors = [ atImport, cssnext, apply ];
+  const processors = [ atImport, cssnext, apply, cssnano ];
 
   return gulp.src(paths.css.src)
     .pipe(plumber())
@@ -188,8 +189,8 @@ const watch = () => {
 const production = gulp.parallel(templatesProd, styles, scripts, images);
 const build = gulp.series(clean, markdown, gulp.parallel(templates, styles, scripts, images));
 const buildProd = gulp.series(markdown, production);
-const all = gulp.series(build, gulp.parallel(lint, connect, watch));
 const deploy = gulp.series(clean, buildProd, pages);
+const all = gulp.series(build, gulp.parallel(lint, connect, watch));
 
 // Exports Functions as Proper Tasks
 export { clean, markdown, templates, styles, scripts, images, lint, watch, connect, pages };
