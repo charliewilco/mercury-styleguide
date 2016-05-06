@@ -6,15 +6,21 @@
 }
 
 .c-example__sub {
-  letter-spacing: 3px;
-  font-size: 1.25rem;
-  color: var(--gray200);
+  letter-spacing: 2px;
+  font-size: 1rem;
+  color: color(var(--gray300) a(25%));
   text-transform: uppercase;
+  font-family: var(--ff-default);
 }
 
 @media (--md) {
   .c-example {
     width: 50%;
+    max-width: 100%;
+  }
+
+  .c-example--four {
+    width: 25%;
     max-width: 100%;
   }
 }
