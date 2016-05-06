@@ -1,5 +1,5 @@
-Mercury Styleguide
----
+# Mercury Styleguide
+
 
 ## Getting Started
 
