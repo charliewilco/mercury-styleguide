@@ -11,4 +11,4 @@ I had some pretty specific goals for this styleguide:
 - Understand the UI in the context of the browser
 - Set principles to maintain consistency
 
-This is just the first stop. There's more to come, as I need icons, I'll add icons to the [Basics]({{ base }}/basics/). More UI components might be need and they could use some refinement for sure. If there's something I should add or fix, let me know on [Twitter](https://twitter.com/charlespeters).
+This is just the first stop. There's more to come, as I need icons, I'll add icons to the [Basics]({{ base }}/). More UI components might be need and they could use some refinement for sure. If there's something I should add or fix, let me know on [Twitter](https://twitter.com/charlespeters).
