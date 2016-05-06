@@ -1,6 +1,5 @@
 :root {
-  --gradient: linear-gradient(-180deg, var(--amberA400) 0%, var(--orange500) 100%);
-  --gradient-dark: linear-gradient(-180deg, var(--orange500) 0%, var(--orange900) 100%);
+
 }
 
 .c-btn {
@@ -35,7 +34,8 @@
   transition: background-position 250ms ease-in-out;
 }
 
-.c-btn--primary:hover, .c-btn--primary:focus {
+.c-btn--primary:hover,
+.c-btn--primary:focus {
   background-position: bottom;
   color: white;
 }
@@ -57,4 +57,16 @@
   transition: color 250ms ease-in-out;
 }
 
-.c-btn--outline:hover, .c-btn--outline:focus { color: var(--orange700); }
+.c-btn--outline:hover,
+.c-btn--outline:focus { color: var(--orange700); }
+
+
+.c-btn--outline--white {
+  background: none;
+  color: white;
+  border: 2px solid;
+  transition: color 250ms ease-in-out;
+}
+
+.c-btn--outline--white:hover,
+.c-btn--outline--white:focus { color: var(--orange300); }
