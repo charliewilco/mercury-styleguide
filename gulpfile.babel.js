@@ -3,6 +3,7 @@ import del from 'del';
 import rename from 'gulp-rename';
 import plumber from 'gulp-plumber';
 import size from 'gulp-size';
+import ghPages from 'gulp-gh-pages';
 import postcss from 'gulp-postcss';
 import cssnext from 'postcss-cssnext';
 import atImport from 'postcss-import';
@@ -76,7 +77,25 @@ const templates = () => {
   };
 
   const hbsConfig = {
-    base: './',
+    base: '.',
+  };
+
+  return gulp.src([paths.views.src, paths.views.ignore])
+    .pipe(plumber())
+    .pipe(handlebars(hbsConfig, options))
+    .pipe(rename({ extname: '.html' }))
+    .pipe(gulp.dest(`${paths.build}/`))
+    .pipe(bs.stream({ once: true }));
+};
+
+const templatesProd = () => {
+  const options = {
+    ignorePartials: true,
+    batch: [paths.views.components],
+  };
+
+  const hbsConfig = {
+    base: 'http://charlespeters.net/mercury-styleguide',
   };
 
   return gulp.src([paths.views.src, paths.views.ignore])
@@ -143,6 +162,14 @@ const connect = () => bs.init({
   },
 });
 
+// Deploy to Github Pages
+/////////////////////////
+
+const pages = () => {
+  return gulp.src(`${paths.build}/**/*`)
+    .pipe(ghPages());
+};
+
 // Watch
 /////////////////////////
 
@@ -154,14 +181,18 @@ const watch = () => {
   gulp.watch(paths.img.src, images);
 };
 
-// Exports Functions as Proper Tasks
-
-export { clean, markdown, templates, styles, scripts, images, lint, watch, connect };
 
 // Default Tasks
 /////////////////////////
 
+const production = gulp.parallel(templatesProd, styles, scripts, images);
 const build = gulp.series(clean, markdown, gulp.parallel(templates, styles, scripts, images));
+const buildProd = gulp.series(markdown, production);
 const all = gulp.series(build, gulp.parallel(lint, connect, watch));
+const deploy = gulp.series(clean, buildProd, pages);
+
+// Exports Functions as Proper Tasks
+export { clean, markdown, templates, styles, scripts, images, lint, watch, connect, pages };
+export { build, deploy, buildProd };
 
 export default all;
